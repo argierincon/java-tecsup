@@ -14,6 +14,7 @@ public class ProductController {
 
   // Se reemplaza por este:
   private final ProductService productService;
+
   // Aca spring hace la DI
   public ProductController(ProductService productService) {
     this.productService = productService;
@@ -44,6 +45,8 @@ public class ProductController {
   }
 
   @DeleteMapping
-  public void delete() {
+  public void delete(@PathVariable Long id) {
+    productService.delete(id);
+
   }
 }
