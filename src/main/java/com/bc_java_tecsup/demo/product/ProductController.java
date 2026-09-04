@@ -45,6 +45,5 @@ public class ProductController {
 
   @DeleteMapping
   public void delete() {
-
   }
 }
